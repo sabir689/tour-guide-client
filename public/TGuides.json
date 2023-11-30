@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "location": "Paris, France",
+    "languages": ["English", "French"],
+    "rating": 4.8,
+    "description": "Experienced guide with a passion for history and culture. Fluent in English and French.",
+    "image": "https://i.ibb.co/wRzysLT/footer.jpg",
+    "tourType": "Adventure"
+  },
+  {
+    "id": 2,
+    "name": "Maria Smith",
+    "location": "Rome, Italy",
+    "languages": ["English", "Italian"],
+    "rating": 4.5,
+    "description": "Enthusiastic guide specializing in ancient Roman history. Fluent in English and Italian.",
+    "image": "https://i.ibb.co/wRzysLT/footer.jpg",
+    "tourType": "Cultural"
+  },
+  {
+    "id": 3,
+    "name": "Carlos Rodriguez",
+    "location": "Barcelona, Spain",
+    "languages": ["English", "Spanish", "Catalan"],
+    "rating": 4.9,
+    "description": "Knowledgeable guide offering tours of Barcelona's rich history and architecture.",
+    "image": "https://i.ibb.co/wRzysLT/footer.jpg",
+    "tourType": "Beach"
+  },
+  {
+    "id": 4,
+    "name": "Aisha Patel",
+    "location": "Jaipur, India",
+    "languages": ["English", "Hindi"],
+    "rating": 4.7,
+    "description": "Passionate guide showcasing the vibrant culture and history of Jaipur. Fluent in English and Hindi.",
+    "image": "https://i.ibb.co/wRzysLT/footer.jpg",
+    "tourType": "Wildlife"
+  },
+  {
+    "id": 5,
+    "name": "Yuki Tanaka",
+    "location": "Tokyo, Japan",
+    "languages": ["English", "Japanese"],
+    "rating": 4.6,
+    "description": "Friendly guide providing insights into Tokyo's modern and traditional aspects. Fluent in English and Japanese.",
+    "image": "https://i.ibb.co/wRzysLT/footer.jpg",
+    "tourType": "City"
+  },
+  {
+    "id": 6,
+    "name": "Elena Rodriguez",
+    
+    "location": "Bariloche, Argentina",
+    "languages": ["Spanish", "English"],
+    "rating": 4.8,
+    "description": "Passionate guide for hiking adventures in the beautiful landscapes of Bariloche.",
+    "image": "https://i.ibb.co/wRzysLT/footer.jpg",
+    "tourType": "Hiking"
+  }
+  
+ 
+  
+]

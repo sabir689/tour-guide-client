@@ -1,0 +1,51 @@
+[
+    {
+      "_id": 1,
+      "name": "Alice",
+      "images1": "https://i.ibb.co/VLq6YmQ/review1.jpgd",
+      "images2": "https://i.ibb.co/BqpZkvZ/img1.jpg",
+      "description": "Alice had an extraordinary journey filled with awe-inspiring moments and cultural revelations. From the vibrant markets of bustling cities to the serene vistas of majestic mountains, every step was an adventure. She immersed herself in new experiences, indulged in exotic cuisines, and forged lasting connections with fellow travelers. The images, a mere glimpse into her expedition, capture the essence of the beauty and diversity she encountered along the way.",
+      "rating": 4.5
+    },
+    {
+      "_id": 2,
+      "name": "Bob",
+      "images1": "https://i.ibb.co/BqpZkvZ/bob_img1.jpg",
+      "images2": "https://i.ibb.co/VLq6YmQ/bob_img2.jpg",
+      "description": "Bob's journey led him off the beaten path into the heart of nature's wonders. He traversed dense forests, camped under starlit skies, and discovered hidden waterfalls that seemed like nature's secrets. Bob's photos not only showcase the raw beauty of the landscapes but also tell a visual story of his intimate connection with the untamed wilderness, creating a captivating narrative of his exploration.",
+      "rating": 5.0
+    },
+    {
+      "_id": 3,
+      "name": "Charlie",
+      "images1": "https://i.ibb.co/BqpZkvZ/charlie_img1.jpg",
+      "images2": "https://i.ibb.co/VLq6YmQ/charlie_img2.jpg",
+      "description": "Charlie's travel odyssey was a fascinating exploration of historic landmarks and architectural marvels. From ancient ruins that whispered tales of bygone eras to modern wonders that stood as symbols of human achievement, he marveled at the diversity of cultures. His journey was a harmonious blend of history, art, and culture, with the images offering a visual feast of the enriching experiences that defined his expedition.",
+      "rating": 4.0
+    },
+    {
+      "_id": 4,
+      "name": "Diana",
+      "images1": "https://i.ibb.co/BqpZkvZ/diana_img1.jpg",
+      "images2": "https://i.ibb.co/VLq6YmQ/diana_img2.jpg",
+      "description": "Diana's journey unfolded as a delectable gastronomic delight, allowing her to explore the world through its diverse cuisines. She sampled the vibrant street food of bustling markets, savored gourmet dishes in renowned restaurants, and even learned to cook local specialties. The images not only showcase the variety of flavors but also capture the joy and satisfaction that made her trip a flavorful and truly memorable experience.",
+      "rating": 4.7
+    },
+    {
+      "_id": 5,
+      "name": "Ethan",
+      "images1": "https://i.ibb.co/BqpZkvZ/ethan_img1.jpg",
+      "images2": "https://i.ibb.co/VLq6YmQ/ethan_img2.jpg",
+      "description": "Ethan's adventure took shape on the open road, where he explored vast landscapes and charming small towns. Driving through scenic routes, he met interesting people, embraced the freedom of the journey, and discovered the thrill of the unexpected. The images vividly convey the essence of the open road, encapsulating the spirit of exploration and the exhilaration of navigating through the unknown.",
+      "rating": 3.8
+    },
+    {
+      "_id": 6,
+      "name": "Fiona",
+      "images1": "https://i.ibb.co/BqpZkvZ/fiona_img1.jpg",
+      "images2": "https://i.ibb.co/VLq6YmQ/fiona_img2.jpg",
+      "description": "Fiona's journey unfolded as a profound spiritual retreat, where she explored serene places of worship and connected with local communities. Immersing herself in ancient traditions, participating in rituals, and finding moments of tranquility in sacred spaces, Fiona's expedition was a transformative experience. The images provide a glimpse into the spiritual and introspective facets of Fiona's profound and enlightening voyage.",
+      "rating": 4.2
+    }
+  ]
+  
