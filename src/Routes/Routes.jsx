@@ -6,7 +6,7 @@ import Main from "../LayOut/Main";
 import Home from "../Pages/Home/Home/Home";
 import TDetails from "../Pages/Home/TouristReview/TDetails";
 import TPackagesDet from "../Pages/TGuide/TPackages/TPackagesDet";
-import TGuidesCard from "../Pages/TGuide/Tour/TGuidesCard";
+
 import LogIn from "../Pages/LogIn/LogIn";
 import Register from "../Register/Register";
 import Dashboard from "../Pages/Dashboard/Dashboard/Dashboard";
@@ -19,6 +19,11 @@ import AddPack from "../Pages/Dashboard/AddPack/AddPack";
 import PrivateRoute from "../FirebaseConfig/PrivateRoute";
 import UserHome from "../Pages/Dashboard/Dashboard/UserHome/USerHOme";
 import MyWishList from "../Pages/Dashboard/Dashboard/MyBookings/MyWishlist/MyWishlist";
+import TGuideTours from "../Pages/Dashboard/TguideTours/TguideTours";
+import TGuidesCard from "../Pages/Tguide/Tour/TGuidesCard";
+import Contact from "../Pages/Contact/Contact";
+import Payment from "../Pages/Dashboard/Payment/Payment";
+import PaymentHistory from "../Pages/Dashboard/PaymentHistory/PaymentHistory";
 // import TDetails from "../Pages/Home/TouristReview/TDetails";
 
 
@@ -43,7 +48,8 @@ export const router = createBrowserRouter([
                 },
                 {
                     path: "/guides/:id",
-                    element:<PrivateRoute> <TGuidesCard></TGuidesCard></PrivateRoute>
+                    element:<PrivateRoute><TGuidesCard></TGuidesCard></PrivateRoute>,
+                    loader: ({params}) => fetch(`https://tourist-guide-server-tau.vercel.app/guides/${params.id}`)
                 },
                 {
                     path: "login",
@@ -56,6 +62,10 @@ export const router = createBrowserRouter([
                 {
                     path: "/community",
                     element:<Community></Community>
+                },
+                {
+                    path: "/contact",
+                    element:<Contact></Contact>
                 },
                 {
                     path: "/blogs",
@@ -72,13 +82,25 @@ export const router = createBrowserRouter([
                 {
                     path: "myBookings",
                     element: <MyBookings></MyBookings>,
-                    loader:()=> fetch('https://tourist-guide-server-tau.vercel.app/bookings')
+                    loader:()=> fetch('https://tourist-guide-server-tau.vercel.app/booking')
                 },
+                {
+                    path: "payment",
+                    element: <Payment></Payment>,
+                    
+                    
+                },
+                {
+                    path: 'paymentHistory',
+                    element: <PaymentHistory></PaymentHistory>,
+                    loader:()=> fetch('https://tourist-guide-server-tau.vercel.app/payments')
+
+                  },
                 
                 {
                     path: "myWishlist",
                     element: <MyWishList></MyWishList>,
-                    loader:()=> fetch('https://tourist-guide-server-tau.vercel.app/wishes')
+                    loader:()=> fetch('https://tourist-guide-server-tau.vercel.app/wish')
                     
                 },
                 {
@@ -92,6 +114,11 @@ export const router = createBrowserRouter([
                 {
                     path: "userHome",
                     element: <UserHome></UserHome>
+                },
+                {
+                    path: "TGuideTours",
+                    element: <TGuideTours></TGuideTours>,
+                    loader:()=> fetch('https://tourist-guide-server-tau.vercel.app/tBooking')
                 },
 
 

@@ -12,7 +12,7 @@
     "tourType": "Adventure",
     "tripTitle": "Mountain Expedition",
     "description": "Embark on the ultimate adventure with our Mountain Expedition tour. Over four thrilling days, you'll experience the challenge and beauty of a guided trek to the base camp, leading to the exhilarating summit day and descent. Begin with a day of arrival and acclimatization before diving into the heart of the mountains. This tour is perfect for adrenaline enthusiasts seeking an unforgettable high-altitude experience.",
-    "price": "$1500",
+    "price": "1500",
     "activities": {
       "day1": "Day1:Arrival and acclimatization",
       "day2": "Day2:Guided trekking to base camp",
@@ -33,7 +33,7 @@
     "tourType": "Cultural",
     "tripTitle": "Historical Cities Tour",
     "description": "Immerse yourself in the rich history of ancient cities with our Cultural tour. Over four days, explore landmarks, museums, and cultural sites, guided by experts passionate about history. From the captivating first day visiting ancient city landmarks to the farewell dinner on the last day, you'll be enchanted by the stories and architecture of historical monuments. This tour is a must for history buffs and culture enthusiasts.",
-    "price": "$1200",
+    "price": "1200",
     "activities": {
       "day1": "Day1:Visit ancient city landmarks",
       "day2": "Day2:Explore museums and cultural sites",
@@ -54,7 +54,7 @@
     "tourType": "Beach",
     "tripTitle": "Tropical Paradise Retreat",
     "Description": "Indulge in a blissful escape with our Tropical Paradise Retreat. Your four-day journey begins with relaxation on pristine beaches, followed by exciting snorkeling and water activities. Revel in the beauty of the tropics and let the soothing waves be your soundtrack. Whether you seek adventure or simply want to unwind in a picturesque setting, this beach retreat offers the perfect balance.",
-    "price": "$1800",
+    "price": "1800",
     "activities": {
       "day1": "Day1:Arrival and beach relaxation",
       "day2": "Day2:Snorkeling and water activities",
@@ -75,7 +75,7 @@
     "tourType": "Wildlife",
     "tripTitle": "Safari Adventure",
     "Description": "Experience the thrill of the wild with our Safari Adventure. Arrive and immerse yourself in a comprehensive safari orientation, followed by a full-day safari experience on day two. Day three offers a unique bush walk, allowing you to get up close with wildlife in their natural habitat. Depart on day four with unforgettable memories of a safari adventure that goes beyond the ordinary.",
-    "price": "$2000",
+    "price": "2000",
     "activities": {
       "day1": "Day1:Arrival and safari orientation",
       "day2": "Day2:Full-day safari experience",
@@ -96,7 +96,7 @@
     "tourType": "City",
     "tripTitle": "Metropolitan Explorer",
     "Description": "Immerse yourself in the vibrant atmosphere of the city with our Metropolitan Explorer tour. Over four days, discover city landmarks, explore museums and art galleries, and soak in the urban culture. The tour culminates in a farewell dinner, providing a perfect blend of cityscape exploration and cultural experiences.",
-    "price": "$1600",
+    "price": "1600",
     "activities": {
       "day1": "Day1:City landmarks and cultural sites",
       "day2": "Day2:Museum and art gallery visits",
@@ -117,7 +117,7 @@
     "tourType": "Hiking",
     "tripTitle": "Nature Trail",
     "Description": " Lace up your hiking boots and join our Nature Trail adventure. Over four days, you'll traverse scenic trails, hike to breathtaking viewpoints, and explore the wonders of nature. Perfect for nature lovers and hiking enthusiasts, this tour offers an immersive experience in the great outdoors.",
-    "price": "$1300",
+    "price": "1300",
     "activities": {
       "day1": "Day1:Trailhead and nature walk",
       "day2": "Day2:Hiking to scenic viewpoints",
@@ -138,7 +138,7 @@
     "tourType": "Food",
     "tripTitle": "Culinary Delights",
     "Description": " Indulge your taste buds in our Culinary Delights tour. From market tours and cooking classes to gourmet dining experiences, this four-day journey is a gastronomic adventure. Immerse yourself in the local food scene, explore diverse flavors, and savor the best culinary offerings. The tour concludes with a delightful farewell dinner.",
-    "price": "$1400",
+    "price": "1400",
     "activities": {
       "day1": "Day1:Market tour and cooking class",
       "day2": "Day2:Gourmet dining experience",
@@ -159,7 +159,7 @@
     "tourType": "Historical",
     "tripTitle": "Ancient Ruins Exploration",
     "Description": "Step back in time with our Historical tour of Ancient Ruins Exploration. Over four days, visit archaeological sites, explore historical ruins, and take guided tours of ancient structures. This tour is designed for history enthusiasts and those fascinated by the mysteries of the past.",
-    "price": "$1700",
+    "price": "1700",
     "activities": {
       "day1": "Day1:Visit to archaeological sites",
       "day2": "Day2:Historical ruins exploration",
@@ -180,7 +180,7 @@
     "tourType": "Relaxation",
     "tripTitle": "Spa and Wellness Retreat",
     "Description": "Unwind and rejuvenate in our Spa and Wellness Retreat. Over four days, indulge in spa relaxation, participate in yoga and meditation sessions, and engage in wellness workshops. This retreat offers a holistic experience, promoting relaxation and self-care amidst serene surroundings.",
-    "price": "$1900",
+    "price": "1900",
     "activities": {
       "day1": "Day1:Arrival and spa relaxation",
       "day2": "Day2:Yoga and meditation sessions",
@@ -201,7 +201,7 @@
     "tourType": "Skiing",
     "tripTitle": "Winter Wonderland",
     "Description": "Embrace the magic of winter with our Skiing tour, Winter Wonderland. Over four days, enjoy the thrill of full-day skiing adventures, explore the enchanting winter landscape, and experience the beauty of a snowy wonderland. The tour concludes with a farewell and departure, leaving you with lasting memories of a winter escapade.",
-    "price": "$2200",
+    "price": "2200",
     "activities": {
       "day1": "Day1:Arrival and ski equipment setup",
       "day2": "Day2:Full-day skiing adventure",

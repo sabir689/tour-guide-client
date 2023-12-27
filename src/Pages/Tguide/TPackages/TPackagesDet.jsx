@@ -46,16 +46,16 @@ const TPackagesDet = () => {
 
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row items-center">
-          <img src={tourDetails.photo1} className="max-w-sm rounded-lg shadow-2xl mb-4 lg:mb-0 lg:mr-4" alt="" />
+          <img src={tourDetails.photo1} className="max-w-4xl rounded-lg shadow-2xl  lg:mb-0 lg:mr-4" alt="" />
 
           <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold mb-4">{tourDetails.tripTitle}</h1>
-            <p className="py-6">${tourDetails.price}</p>
+            <h1 className="text-2xl text-green-300 border-2 rounded-box p-4 hover:bg-green-200 font-bold mb-4">{tourDetails.tripTitle}</h1>
+            <p className=" text-green-300">Price: ${tourDetails.price}</p>
             <p className="py-6">{tourDetails.description}</p>
 
             <div className="mb-4">
-              <h2 className="text-2xl font-bold mb-2">Activities</h2>
-              <ul className="ml-6 text-center lg:text-left">
+              <h2 className="text-2xl text-green-300  font-bold mb-2 ">Activities</h2>
+              <ul className=" text-center lg:text-left">
                 {tourDetails.activities && Object.values(tourDetails.activities).map((activity, index) => (
                   <li key={index} className="mb-2">{activity}</li>
                 ))}
@@ -69,7 +69,7 @@ const TPackagesDet = () => {
         <TGuides />
       </div>
 
-      
+
       <BookingForm tourName={tourDetails.tripTitle} tourPrice={tourDetails.price} />
 
     </div>

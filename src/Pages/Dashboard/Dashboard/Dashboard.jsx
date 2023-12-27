@@ -1,12 +1,14 @@
-import { FaCalendar, FaHome, FaShoppingCart } from "react-icons/fa";
+import { FaCalendar, FaHome, FaList, FaShoppingCart } from "react-icons/fa";
 import { NavLink, Outlet } from "react-router-dom";
 import useAdmin from "../../../hooks/useAdmin";
 import useTGuide from "../../../hooks/usetGuide"; // Fix the typo here
+import useBookings from "../../../hooks/useBookings";
 
 
 const Dashboard = () => {
     const [isAdmin] = useAdmin();
     const [isTGuide] = useTGuide();
+    const [booking] = useBookings();
 
     return (
         <div className="flex ">
@@ -41,7 +43,7 @@ const Dashboard = () => {
                                             My Profile</NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="/dashboard/assignedTours">
+                                        <NavLink to="/dashboard/tGuideTours">
                                             <FaHome></FaHome>
                                             My Assigned Tours</NavLink>
                                     </li>
@@ -57,12 +59,17 @@ const Dashboard = () => {
                                     <li>
                                         <NavLink to="/dashboard/myBookings">
                                             <FaCalendar></FaCalendar>
-                                            My Bookings</NavLink>
+                                            My Bookings({booking.length})</NavLink>
                                     </li>
                                     <li>
                                         <NavLink to="/dashboard/myWishlist">
                                             <FaShoppingCart></FaShoppingCart>
                                             My Wishlist </NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink to="/dashboard/paymentHistory">
+                                            <FaList></FaList>
+                                            Real Payment History</NavLink>
                                     </li>
                                 </>
                             )

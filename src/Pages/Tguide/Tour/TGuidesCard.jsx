@@ -1,21 +1,16 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Slider from 'react-slick';
-
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 
 const TGuidesCard = () => {
-  const { id } = useParams(); 
-  const [guide, seTGuide] = useState(null);
+  const { id } = useParams();
+  const [guideDetails, setGuideDetails] = useState(null);
 
   useEffect(() => {
     const fetchGuideDetails = async () => {
       try {
-        const response = await fetch('https://tourist-guide-server-tau.vercel.app/guides'); 
+        const response = await fetch(`https://tourist-guide-server-tau.vercel.app/guides/${id}`);
         const data = await response.json();
-        const selectedGuide = data.find((guide) => guide.id === parseInt(id, 10));
-        seTGuide(selectedGuide);
+        setGuideDetails(data);
       } catch (error) {
         console.error('Error fetching guide details:', error);
       }
@@ -24,33 +19,40 @@ const TGuidesCard = () => {
     fetchGuideDetails();
   }, [id]);
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
+  if (!guideDetails) {
+    return <div>Loading...</div>;
+  }
 
   return (
-    <div className="hero-section bg-gray-100 py-10">
-      {guide ? (
-        <Slider {...settings} className="max-w-screen-xl mx-auto">
-          <div className="guide-details bg-white p-8 rounded-md shadow-md">
-            <h1 className="text-3xl font-semibold mb-4">{guide.name}</h1>
-            <p className="text-gray-600 italic mb-2">{guide.location}</p>
-            <p className="font-bold mb-2">Languages: {guide.languages.join(', ')}</p>
-            <p className="font-bold mb-2">Rating: {guide.rating}</p>
-            <p className="mb-4">{guide.description}</p>
-            <img className="w-full max-h-64 object-cover rounded-md" src={guide.image} alt={guide.name} />
-          </div>
-          
-        </Slider>
-      ) : (
-        <p>Loading...</p>
-      )}
+    <div className="container mx-auto p-32">
+      <div className="flex flex-col items-center">
+        <img
+          src={guideDetails.image}
+          alt={guideDetails.name}
+          className="w-32 h-32 object-cover object-center rounded-full mb-4"
+        />
+        <h1 className="text-2xl font-semibold mb-2">{guideDetails.name}</h1>
+        <p className="text-gray-500 mb-4">Location: {guideDetails.location}</p>
+      </div>
+
+      <div className="bg-green-300 text-gray-800 p-6 rounded-md mt-4">
+        <h2 className="text-lg font-semibold mb-2">Introduction</h2>
+        <p className="mb-2">
+          <strong>Languages:</strong> {guideDetails.languages}
+        </p>
+        <p className="mb-2">
+          <strong>Description:</strong> {guideDetails.description}
+        </p>
+        <p className="mb-2">
+          <strong>Tour Type:</strong> {guideDetails.tourType}
+        </p>
+        <p className="mb-2">
+          <strong>Email:</strong> {guideDetails.email}
+        </p>
+      </div>
     </div>
   );
 };
 
 export default TGuidesCard;
+

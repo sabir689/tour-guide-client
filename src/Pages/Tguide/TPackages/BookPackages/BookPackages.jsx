@@ -1,25 +1,30 @@
 import { useState, useEffect } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import useAuth from '../../../../hooks/useAuth';
+import Swal from 'sweetalert2';
+import 'sweetalert2/dist/sweetalert2.css';
 
 const BookingForm = ({ tourName, tourPrice }) => {
+  const { user } = useAuth();
+
   const [formData, setFormData] = useState({
     touristName: '',
-    touristEmail: '',
+    touristEmail: user?.email || '',
     tourDate: new Date(),
     tourGuide: '',
-    tourName: tourName || '', // Use the provided tourName or an empty string
+    tourName: tourName || '',
     tourPrice: tourPrice || 0,
   });
 
-  const [guideNames, seTGuideNames] = useState([]);
+  const [guideNames, setGuideNames] = useState([]);
 
   useEffect(() => {
     const fetchGuideNames = async () => {
       try {
         const response = await fetch('https://tourist-guide-server-tau.vercel.app/guides');
         const data = await response.json();
-        seTGuideNames(data);
+        setGuideNames(data);
       } catch (error) {
         console.error('Error fetching guide names:', error);
       }
@@ -31,7 +36,6 @@ const BookingForm = ({ tourName, tourPrice }) => {
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-    
     if (name === 'tourName') {
       const selectedTour = guideNames.find((guide) => guide.name === value);
       const newTourPrice = selectedTour ? selectedTour.price : 0;
@@ -47,10 +51,9 @@ const BookingForm = ({ tourName, tourPrice }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
 
     try {
-      const response = await fetch('https://tourist-guide-server-tau.vercel.app/bookings', {
+      const response = await fetch('https://tourist-guide-server-tau.vercel.app/booking', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -60,15 +63,74 @@ const BookingForm = ({ tourName, tourPrice }) => {
 
       const data = await response.json();
       console.log(data);
+
+      if (response.ok) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Booking Successful!',
+          text: 'Your tour has been booked successfully.',
+        });
+
+        setFormData({
+          touristName: '',
+          touristEmail: user?.email || '',
+          tourDate: new Date(),
+          tourGuide: '',
+          tourName: tourName || '',
+          tourPrice: tourPrice || 0,
+        });
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: 'Booking Failed',
+          text: 'There was an error processing your booking. Please try again.',
+        });
+      }
+
+      // Code for tourGuide
+      const responseGuide = await fetch('https://tourist-guide-server-tau.vercel.app/tBooking', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const dataGuide = await responseGuide.json();
+      console.log(dataGuide);
+
+      if (responseGuide.ok) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Booking Successful!',
+          text: 'Your tour has been booked successfully.',
+        });
+
+        setFormData({
+          touristName: '',
+          touristEmail: user?.email || '',
+          tourDate: new Date(),
+          tourGuide: '',
+          tourName: tourName || '',
+          tourPrice: tourPrice || 0,
+        });
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: 'Booking Failed',
+          text: 'There was an error processing your booking. Please try again.',
+        });
+      }
+
     } catch (error) {
       console.error('Error:', error);
     }
   };
 
   return (
-    <div className="container mx-auto mt-8">
-      <form onSubmit={handleSubmit} className="max-w-md mx-auto p-6 bg-white rounded-md shadow-md">
-        <h2 className="text-2xl font-semibold mb-4">{tourName} - Booking Form</h2>
+    <div className="container mt-8">
+      <form onSubmit={handleSubmit} className="mx-auto p-6 bg-green-300 rounded-md shadow-md">
+        <h2 className="text-3xl font-bold mb-4 text-center">{tourName} - Booking Form</h2>
 
         {['touristName', 'touristEmail', 'tourName', 'tourPrice'].map((fieldName) => (
           <div key={fieldName} className="mb-4">

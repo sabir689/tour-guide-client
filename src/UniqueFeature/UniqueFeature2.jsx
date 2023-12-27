@@ -36,12 +36,12 @@ const UniqueFeature2 = () => {
 
     return (
         <Fade>
-            <div className="w-2/3 mx-auto py-16">
-                <h2 className='text-center text-white font-bold text-4xl my-10'>Contact <span className='text-[#804dee]'>Me</span></h2>
+            <div className=" rounded-box py-16 bg-green-300 p-8">
+                <h2 className='text-center text-white font-bold text-4xl my-10'>Join As A <span className='text-[#804dee]'>Tour Guide</span></h2>
                 <form ref={form} onSubmit={sendEmail}>
                     <div className="flex gap-4 mb-4">
                         <div className="w-1/2">
-                            <label className="block mb-2 text-white">
+                            <label className="block text-2xl mb-2 text-white">
                                 Name
                             </label>
                             <input
@@ -53,7 +53,7 @@ const UniqueFeature2 = () => {
                             />
                         </div>
                         <div className="w-1/2">
-                            <label htmlFor="contactNumber" className="block mb-2 text-white">
+                            <label htmlFor="contactNumber" className="block text-2xl mb-2 text-white">
                                 Contact Number
                             </label>
                             <input
@@ -65,7 +65,7 @@ const UniqueFeature2 = () => {
                     </div>
                     <div className='flex gap-4'>
                         <div className="w-1/2">
-                            <label className="block mb-2 text-white">
+                            <label className="block text-2xl mb-2 text-white">
                                 Email Address
                             </label>
                             <input
@@ -77,19 +77,19 @@ const UniqueFeature2 = () => {
                             />
                         </div>
                         <div className="w-1/2">
-                            <label htmlFor="subject" className="block mb-2 text-white">
+                            <label htmlFor="subject" className="block text-2xl mb-2 text-white">
                                 Email Subject
                             </label>
                             <input
                                 type="text"
                                 id="subject"
-                                className="w-full border-gray-300 border p-2 rounded"
+                                className="w-full  border-gray-300 border p-2 rounded"
                                 required
                             />
                         </div>
                     </div>
                     <div className="my-4">
-                        <label htmlFor="message" className="block mb-2 text-white">
+                        <label htmlFor="message" className="block text-2xl mb-2 text-white">
                             Your Message
                         </label>
                         <textarea

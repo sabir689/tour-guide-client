@@ -1,82 +1,44 @@
 
-import { useLoaderData } from "react-router-dom";
+import { useState } from 'react';
+import { Link, useLoaderData } from "react-router-dom";
+import MyBookingsCard from "./MyBookingsCard";
+
+
 
 const MyBookings = () => {
-  const myBookings = useLoaderData();
-
-  const handlePay = (bookingId) => {
-    console.log(`Pay button clicked for booking ID: ${bookingId}`);
-    
-  };
-
-  const handleCancel = (bookingId) => {
-    console.log(`Cancel button clicked for booking ID: ${bookingId}`);
-    
-  };
-
-  const handleApply = (bookingId) => {
-    console.log(`Apply button clicked for booking ID: ${bookingId}`);
-   
-  };
+  const loadedBookings = useLoaderData();
+  const [bookings, setBookings] = useState(loadedBookings);
+  const totalPrice = bookings.reduce((total, item) => total + parseFloat(item.tourPrice), 0);
+  // const totalPrice = bookings.reduce((total, item) => total + (item.tourPrice), 0);
 
   return (
-    <div className="p-32">
-      <div className="flex justify-between">
-        <h1 className="text-3xl font-semibold mb-6">
-          My Bookings: {myBookings.length}
-        </h1>
+    <div className='m-20'>
+
+
+      <div className='flex items-center justify-between'>
+        <h1 className='text-4xl text-center text-bold my-20 text-green-300'>My Bookings: {bookings.length}</h1>
+        <h2 className='text-4xl text-center text-bold my-20 text-green-300'>Total Price: ${totalPrice}</h2>
+        {bookings.length ?
+          <Link to="/dashboard/payment">
+            <button className="btn text-gray-800  bg-green-500">Payment</button>
+          </Link> :
+          <button disabled className="btn text-gray-800 bg-green-500">Payment</button>
+        }
       </div>
-      <table className="min-w-full border border-gray-300">
-        <thead>
-          <tr className="bg-gray-100">
-            <th className="border p-3">Package</th>
-            <th className="border p-3">Tour Guide</th>
-            <th className="border p-3">Tour Date</th>
-            <th className="border p-3">Tour Price</th>
-            <th className="border p-3">Status</th>
-            <th className="border p-3">Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {myBookings.map((booking) => (
-            <tr key={booking._id} className="border-b">
-              <td className="border p-3">{booking.tourName}</td>
-              <td className="border p-3">{booking.tourGuide}</td>
-              <td className="border p-3">
-                {new Date(booking.tourDate).toLocaleDateString()}
-              </td>
-              <td className="border p-3">${booking.tourPrice}</td>
-              <td className="border p-3">{booking.status}</td>
-              <td className="border p-3 ">
-                {booking.status === "In Review" && (
-                  <button onClick={() => handleCancel(booking._id)} className="btn mr-2">
-                    Cancel
-                  </button>
-                )}
-                {booking.status === "In Review" && (
-                  <button onClick={() => handleApply(booking._id)} className="btn mr-2" disabled>
-                    Apply
-                  </button>
-                )}
-                {booking.status === "In Review" && (
-                  <button
-                    onClick={() => handlePay(booking._id)}
-                    className="btn"
-                    disabled
-                  >
-                    Pay
-                  </button>
-                )}
-                {booking.status === "Accepted" && (
-                  <button onClick={() => handlePay(booking._id)} className="btn">
-                    Pay
-                  </button>
-                )}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+
+      <div className='grid md:grid-cols-2 gap-4'>
+
+        {bookings.map(booking => (
+          <MyBookingsCard
+            key={booking._id}
+            booking={booking}
+            bookings={bookings}
+            setBookings={setBookings}
+          />
+        ))}
+
+      </div>
+
     </div>
   );
 };

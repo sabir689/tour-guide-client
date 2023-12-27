@@ -41,13 +41,13 @@ const AddPack = () => {
     };
 
     return (
-        <div className="bg-[#F4F3F0] p-20">
+        <div className="bg-green-400 p-20 text-gray-800">
             <h2 className="text-3xl font-extrabold text-center ">Add a Package</h2>
             <form onSubmit={handleAddPack}>
-                <div className="mb-8">
+                <div className="mb-8 ">
                     <div className="form-control w-full">
                         <label className="label">
-                            <span className="label-text">Picture</span>
+                            <span className="label-text text-gray-800 text-bold text-2xl">Picture</span>
                         </label>
                         <label className="input-group">
                             <input
@@ -63,7 +63,7 @@ const AddPack = () => {
                 <div className="mb-8">
                     <div className="form-control w-full">
                         <label className="label">
-                            <span className="label-text">tourType</span>
+                            <span className="label-tex  text-gray-800 text-bold text-2xl">tourType</span>
                         </label>
                         <label className="input-group">
                             <input
@@ -79,7 +79,7 @@ const AddPack = () => {
                 <div className="mb-8">
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Your Name</span>
+                            <span className="label-text  text-gray-800 text-bold text-2xl">Your Name</span>
                         </label>
                         <label className="input-group">
                             <input
@@ -96,7 +96,7 @@ const AddPack = () => {
                 <div className="mb-8">
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Your Email</span>
+                            <span className="label-text  text-gray-800 text-bold text-2xl">Your Email</span>
                         </label>
                         <label className="input-group">
                             <input
@@ -112,7 +112,7 @@ const AddPack = () => {
                 <div className="mb-8">
                     <div className="form-control w-full">
                         <label className="label">
-                            <span className="label-text">Price</span>
+                            <span className="label-text  text-gray-800 text-bold text-2xl">Price</span>
                         </label>
                         <label className="input-group">
                             <input
@@ -128,7 +128,7 @@ const AddPack = () => {
                 <div className="mb-8">
                     <div className="form-control w-full">
                         <label className="label">
-                            <span className="label-text">tripTitle</span>
+                            <span className="label-text  text-gray-800 text-bold text-2xl">tripTitle</span>
                         </label>
                         <label className="input-group">
                             <input
@@ -144,7 +144,7 @@ const AddPack = () => {
                 <div className="mb-8">
                     <div className="form-control w-full">
                         <label className="label">
-                            <span className="label-text">Description</span>
+                            <span className="label-text  text-gray-800 text-bold text-2xl">Description</span>
                         </label>
                         <label className="input-group">
                             <textarea

@@ -19,8 +19,8 @@ const Home = () => {
             <TourTypes></TourTypes>
             <TouristReview></TouristReview>
             <UniqueFeature2></UniqueFeature2>
-            
-            
+
+
         </div>
     );
 };

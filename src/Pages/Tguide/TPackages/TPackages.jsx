@@ -30,7 +30,7 @@ const Packages = () => {
       tripTitle: tour.tripTitle,
     };
 
-    fetch('https://tourist-guide-server-tau.vercel.app/wishes', {
+    fetch('https://tourist-guide-server-tau.vercel.app/wish', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -56,12 +56,12 @@ const Packages = () => {
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {tourData.map((tour) => (
-            <div key={tour.id} className="bg-white rounded-md overflow-hidden shadow-md relative">
+            <div key={tour.id} className="bg-green-400 text-gray-800 rounded-md overflow-hidden shadow-md relative">
               <img src={tour.photo1} alt={`Tour ${tour.id}`} className="w-full h-48 object-cover" />
               <div className="p-4">
                 <h2 className="text-xl font-bold mb-2">{tour.tourType}</h2>
                 <h3 className="text-lg mb-2">{tour.tripTitle}</h3>
-                <p className="text-gray-700 mb-2">{tour.price}</p>
+                <p className="text-gray-700 mb-2">${tour.price}</p>
                 <Link
                   to={`/tour/${tour.id}`}
                   className="bg-blue-500 text-white py-2 px-4 rounded-full focus:outline-none inline-block"

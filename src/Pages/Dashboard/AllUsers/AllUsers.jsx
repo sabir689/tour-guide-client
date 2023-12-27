@@ -101,7 +101,7 @@ const AllUsers = () => {
                                 <td>
                                     { user.role === 'admin' ? 'Admin' : <button
                                         onClick={() => handleMakeAdmin(user)}
-                                        className="btn btn-lg bg-orange-500">
+                                        className="btn btn-lg bg-green-500">
                                         <FaUsers className="text-white 
                                         text-2xl"></FaUsers>
                                     </button>}
@@ -109,7 +109,7 @@ const AllUsers = () => {
                                 <td>
                                     { user.role === 'TGuide' ? 'TGuide' : <button
                                         onClick={() => handleMakeTGuide(user)}
-                                        className="btn btn-lg bg-orange-500">
+                                        className="btn btn-lg bg-green-500">
                                         <FaUsers className="text-white 
                                         text-2xl"></FaUsers>
                                     </button>}
@@ -118,7 +118,7 @@ const AllUsers = () => {
                                     <button
                                         onClick={() => handleDeleteUser(user)}
                                         className="btn btn-ghost btn-lg">
-                                        <FaTrashAlt className="text-red-600"></FaTrashAlt>
+                                        <FaTrashAlt className="text-green-600"></FaTrashAlt>
                                     </button>
                                 </td>
                             </tr>)

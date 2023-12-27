@@ -7,7 +7,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Rating } from "@smastrom/react-rating";
 import '@smastrom/react-rating/style.css'
-import SectionTitle from '../../../Components/SectionTitle/SectionTitle';
+import SectionTitle from '../../../Components/SectionTitle/Sectiontitle';
+
 
 
 

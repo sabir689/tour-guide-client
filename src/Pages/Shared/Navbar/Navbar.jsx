@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../../FirebaseConfig/AuthProvider";
 
 
+
+
 const ProfileDropdown = ({ user, handleLogOut }) => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
 
@@ -35,6 +37,7 @@ const ProfileDropdown = ({ user, handleLogOut }) => {
 };
 
 const Navbar = () => {
+
   const { user, logOut } = useContext(AuthContext);
 
   const handleLogOut = () => {
@@ -81,7 +84,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Get started</a>
+          <a className=""></a>
         </div>
       </div>
     </>
